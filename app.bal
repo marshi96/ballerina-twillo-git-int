@@ -9,13 +9,13 @@ function main(string... args) {
         clientConfig: {
             auth:{
                 scheme:http:OAUTH2,
-                accessToken:"c725619f431f04d094fe38b8682ecf1522c1e158"
+                accessToken:"ecab081dc7ff13836a482baeba2ce0903b336c6f"
             }
         }
     };
 
     github4:Repository repository = {};
-    var repo = githubClient->getRepository("code-tesh/test");
+    var repo = githubClient->getRepository("code-tesh/ballerina-twillo-git-int");
     match repo {
         github4:Repository rep => {
             repository = rep;
@@ -25,6 +25,8 @@ function main(string... args) {
         }
     }
 
+    // Previous time stamp 
+    
     var time = repository.updatedAt;
 
     
